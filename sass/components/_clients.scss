@@ -1,0 +1,107 @@
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desk {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+    
+  
+}
+
+.clients__title {
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: rgba(33, 33, 33, 1);
+  margin-bottom: 30px;
+  text-align: center;
+   @include desk {
+  font-size: 36px;
+  line-height: 1.16;
+  }
+}
+
+.clients__list {
+    @media screen and (max-width:767px){
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+      }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+    }
+    @include desk{
+  display: flex;
+  justify-content: center;
+      
+    }
+}
+
+.clients__item {
+  list-style-type: none;
+  width: calc(100% /2 - 30px);
+  height: 92px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+    @media screen and(min-width:480px) and (max-width:767px){
+  width: calc(100% /2 - 30px);
+  margin-bottom: 30px;
+  margin-left: 30px;
+  }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+  width: calc(100% /3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  }
+    @include desk {
+  height: 92px;
+  margin-left: 30px;
+    &:first-child{
+  margin:0;
+    }          
+  }
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  border-color: #afb1b8;
+  transition: border-color $transparent-animation;
+    &:hover,
+    &:focus {
+  border-color: $accent-color;
+  transition: border-color $transparent-animation;  
+  }
+}
+
+.clients__icon {
+  fill: rgba(175, 177, 184, 1);
+  transition: fill $transparent-animation;
+    &:hover,
+    &:focus {
+  fill: $accent-color;
+  transition: fill $transparent-animation;
+  }
+    .clients__link:hover & {
+      fill: $accent-color;
+      transition: fill $transparent-animation;
+    }
+
+        .clients__link:focus & {
+          fill: $accent-color;
+          transition: fill $transparent-animation;
+        }
+}

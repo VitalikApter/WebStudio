@@ -1,0 +1,207 @@
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desk {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+}
+
+
+
+.portfolio__navigation-btn-list{
+  margin-bottom: 40px;
+  
+@media screen and (max-width:767px){
+  display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    row-gap: 15px;
+    
+}
+@include tab{
+  display: flex;
+    justify-content: center;
+    gap: 8px;
+    row-gap: 15px;
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+@include desk{
+  display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    list-style-type: none;
+}
+} 
+
+.portfolio__navigation-btn-item {
+  cursor: pointer;
+  align-items: center;
+  
+}
+ 
+.portfolio__list {
+      @media screen and (min-width:768px) and (max-width:1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        margin-bottom: -30px;
+      }
+      @include desk{
+        display: flex;
+          flex-wrap: wrap;
+          margin-left: -30px;
+          margin-bottom: -30px;
+      }      
+}
+
+.portfolio__item {
+  width: 100%;
+  margin-bottom: 30px;
+
+  @media screen and (max-width:1199px){
+    &:last-child {
+        margin-bottom: 0;
+      }
+  }
+
+  @include tab {
+    width: calc(100% /2 - 30px);
+    margin-left: 30px;
+  }
+
+  @include desk {
+    width: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    
+    
+  }
+ 
+}
+
+.portfolio__title {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $first-title-color;
+    margin-bottom: 4px;
+}
+
+.portfolio__text {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: #757575;
+ 
+}
+
+.portfolio__text-container {
+  padding: 20px 24px;
+  border: 1px solid #EEEEEE;
+  @include desk {
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+}
+@media screen and (min-width:768px) and (max-width:1199px){
+  flex-grow: 1;
+}
+}
+
+
+
+.portfolio__wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__img {
+  margin: 0;
+  width: 100%;
+}
+
+.portfolio__window-text {
+  position: absolute;
+  top: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+  height: 100%;
+  transform: translateY(101%);
+  transition: $transparent-animation;
+  .portfolio__link:hover & {
+      transform: translateY(0);
+      transition: $transparent-animation;
+    }
+  
+    .portfolio__link:focus & {
+      transform: translateY(0);
+      transition: $transparent-animation;
+    }
+}
+
+ 
+
+ 
+
+.button {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  background-color: #f5f4fa;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border-color: transparent;
+  transition: color $transparent-animation,
+    background-color $transparent-animation, box-shadow $transparent-animation;
+}
+
+.portfolio__button{
+  border-radius: 4px;
+  &:hover,
+  &:focus {
+      background: $accent-color;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+      color: #ffffff;
+    }
+}
+
+
+
+.portfolio__link {
+  display: block;
+  transition: box-shadow $transparent-animation;
+@media screen and (min-width:768px) and (max-width:1199px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+&:hover,
+&:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow $transparent-animation;
+  }
+   
+}
